@@ -19,7 +19,8 @@ class AuthController extends Controller
             'first_name' => $request->input('first_name'),
             'last_name' => $request->input('last_name'),
             'email' => $request->input('email'),
-            'password' => Hash::make($request->input('password'))
+            'password' => Hash::make($request->input('password')),
+            'role_id'=>3
         ]);
 
         return response($user, Response::HTTP_CREATED);
@@ -47,9 +48,9 @@ class AuthController extends Controller
     public function user(Request $request)
     {
         $user = $request->user();
-        return $user;
+       // return $user;
 
-        //return new UserResource($user->load('role'));
+        return new UserResource($user->load('role'));
     }
     public function logout()
     {

@@ -4,6 +4,10 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\RoleController;
+use App\Http\Controllers\ImageController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\OrderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,6 +32,12 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::post('logout', [AuthController::class, 'logout']);
 
     Route::apiResource('roles', RoleController::class);
+    Route::apiResource('products', ProductController::class);
     Route::apiResource('users', UserController::class);
     Route::get('permissions', [PermissionController::class, 'index']);
+    Route::post('upload', [ImageController::class, 'upload']);
+    Route::apiResource('orders', OrderController::class)->only('index', 'show');
+
+    Route::post('export', [OrderController::class, 'export']);
+    Route::get('chart', [OrderController::class, 'chart']);
 });
