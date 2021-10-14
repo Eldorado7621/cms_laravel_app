@@ -1,3 +1,37 @@
+<div class="call-out newsletter">
+        
+        <div class="container wide">
+          
+          <div class="row align-items-center">
+            <div class="col-lg-7 offset-lg-1">
+              
+              <h4 class="call-title f-left">Newsletter Sign Up</h4>
+              <form id="newsletter" class="newsletter style-2">
+                <button type="submit" data-type="submit" class="btn btn-big btn-style-5 f-right"><i class="licon-envelope"></i></button>
+                <div class="wrapper">
+                  <input type="email" name="newsletter-email" placeholder="Enter your email address">
+                </div>
+              </form>
+  
+            </div>
+            <div class="col-lg-4">
+              
+              <ul class="social-icons style-2">
+  
+                <li><a href="#"><i class="icon-facebook"></i></a></li>
+                <li><a href="#"><i class="icon-twitter"></i></a></li>
+                <li><a href="#"><i class="icon-gplus-3"></i></a></li>
+                <li><a href="#"><i class="icon-youtube-play"></i></a></li>
+                <li><a href="#"><i class="icon-instagram-5"></i></a></li>
+  
+              </ul>
+  
+            </div>
+          </div>
+  
+        </div>
+  
+      </div>
 <footer id="footer" class="footer">
 
       <div class="container wide">

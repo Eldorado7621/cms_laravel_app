@@ -16,3 +16,16 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('index');
 });
+
+Route::get('/events', function () {
+    return view('events');
+});
+Route::get('/livestream', function () {
+    return view('livestream');
+});
+Route::get('/sermons', function () {
+    return view('sermons');
+});
+Route::get('/contact-pastor', function () {
+    return view('contact_pastor');
+});
