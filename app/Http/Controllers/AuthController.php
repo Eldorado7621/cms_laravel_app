@@ -44,7 +44,10 @@ class AuthController extends Controller
         return \response([
             'jwt' => $jwt
         ])->withCookie($cookie);
-    }
+
+       // return redirect()->route('dashboard')->withCookie($cookie);
+        }
+
     public function user(Request $request)
     {
         $user = $request->user();
@@ -54,10 +57,13 @@ class AuthController extends Controller
     }
     public function logout()
     {
-        $cookie = \Cookie::forget('jwt');
-
+        /*$cookie = \Cookie::forget('jwt');
+      
         return \response([
             'message' => 'success'
-        ])->withCookie($cookie);
+        ])->withCookie($cookie);*/
+
+        auth()->user()->tokens()->delete();
+      
     }
 }
